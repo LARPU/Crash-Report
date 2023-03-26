@@ -1,0 +1,1197 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 2023-03-26 18:51:08
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "net.minecraft.class_3414.method_43044(float)" because "$$4" is null
+	at net.minecraft.class_3218.method_8465(class_3218.java:904)
+	at net.minecraft.class_1937.method_43128(class_1937.java:404)
+	at net.minecraft.class_1297.method_5783(class_1297.java:1126)
+	at net.minecraft.class_3763$class_4260.method_6268(class_3763.java:375)
+	at net.minecraft.class_4135.method_6268(class_4135.java:65)
+	at net.minecraft.class_1355.method_38849(class_1355.java:119)
+	at net.minecraft.class_1355.method_6275(class_1355.java:110)
+	at net.minecraft.class_1308.method_6023(class_1308.java:753)
+	at net.minecraft.class_1309.method_6007(class_1309.java:2641)
+	at net.minecraft.class_1308.method_6007(class_1308.java:553)
+	at net.minecraft.class_1588.method_6007(class_1588.java:44)
+	at net.minecraft.class_3763.method_6007(class_3763.java:114)
+	at net.minecraft.class_1640.method_6007(class_1640.java:175)
+	at net.minecraft.class_1309.method_5773(class_1309.java:2385)
+	at net.minecraft.class_1308.method_5773(class_1308.java:353)
+	at net.minecraft.class_3218.method_18762(class_3218.java:712)
+	at net.minecraft.class_1937.method_18472(class_1937.java:466)
+	at net.minecraft.class_3218.method_31420(class_3218.java:371)
+	at net.minecraft.class_5574.method_31791(class_5574.java:54)
+	at net.minecraft.class_3218.method_18765(class_3218.java:339)
+	at net.minecraft.server.MinecraftServer.method_3813(MinecraftServer.java:875)
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:819)
+	at net.minecraft.class_1132.method_3748(class_1132.java:98)
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at net.minecraft.class_3218.method_8465(class_3218.java:904)
+	at net.minecraft.class_1937.method_43128(class_1937.java:404)
+	at net.minecraft.class_1297.method_5783(class_1297.java:1126)
+	at net.minecraft.class_3763$class_4260.method_6268(class_3763.java:375)
+	at net.minecraft.class_4135.method_6268(class_4135.java:65)
+	at net.minecraft.class_1355.method_38849(class_1355.java:119)
+	at net.minecraft.class_1355.method_6275(class_1355.java:110)
+	at net.minecraft.class_1308.method_6023(class_1308.java:753)
+	at net.minecraft.class_1309.method_6007(class_1309.java:2641)
+	at net.minecraft.class_1308.method_6007(class_1308.java:553)
+	at net.minecraft.class_1588.method_6007(class_1588.java:44)
+	at net.minecraft.class_3763.method_6007(class_3763.java:114)
+	at net.minecraft.class_1640.method_6007(class_1640.java:175)
+	at net.minecraft.class_1309.method_5773(class_1309.java:2385)
+	at net.minecraft.class_1308.method_5773(class_1308.java:353)
+	at net.minecraft.class_3218.method_18762(class_3218.java:712)
+	at net.minecraft.class_1937.method_18472(class_1937.java:466)
+	at net.minecraft.class_3218.method_31420(class_3218.java:371)
+	at net.minecraft.class_5574.method_31791(class_5574.java:54)
+	at net.minecraft.class_3218.method_18765(class_3218.java:339)
+Mixins in Stacktrace:
+	net.minecraft.class_3218:
+		dev.onyxstudios.cca.mixin.chunk.common.MixinServerWorld (mixins.cardinal_components_chunk.json)
+		net.spellbladenext.fabric.mixin.cleansingfiremixin (spellbladenext.mixins.json)
+		dev.onyxstudios.cca.mixin.world.common.MixinServerWorld (mixins.cardinal_components_world.json)
+		elocindev.ysns.fabric_quilt.mixin.ServerWorldMixin (ysns.fabricmixins.json)
+		svenhjol.charm.mixin.snow_accumulation.PlaceMoreSnowMixin (charm.mixins.json)
+		net.spellbladenext.fabric.mixin.EyeMixin (spellbladenext.mixins.json)
+		net.dungeon_difficulty.mixin.ServerWorldMixin (dungeon_difficulty.mixins.json)
+		eu.pb4.polymer.mixin.entity.ServerWorldAccessor (polymer.mixins.json)
+		party.lemons.biomemakeover.mixin.multipart.ServerLevelMixin (biomemakeover-common.mixins.json)
+		com.slomaxonical.architectspalette.mixin.ServerWorldMixin (architechtspalette.mixins.json)
+		me.jellysquid.mods.lithium.mixin.profiler.ServerWorldMixin (lithium.mixins.json)
+		net.rpgdifficulty.mixin.ServerWorldMixin (rpgdifficulty.mixins.json)
+		net.projectile_damage.mixin.ServerWorldMixin (projectile_damage.mixins.json)
+		com.yungnickyoung.minecraft.betterdeserttemples.mixin.ServerLevelMixin (betterdeserttemples.mixins.json)
+		dev.mrsterner.guardvillagers.mixin.ServerWorldMixin (guardvillagers.mixins.json)
+		com.natamus.collective.fabric.mixin.ServerLevelMixin (collective-fabric.mixins.json)
+		paulevs.edenring.mixin.common.ServerLevelMixin (edenring.mixins.common.json)
+		com.faboslav.friendsandfoes.mixin.ServerWorldMixin (friendsandfoes-common.mixins.json)
+		net.mehvahdjukaar.supplementaries.mixins.ServerLevelMixin (supplementaries-common.mixins.json)
+		net.id.incubus_core.mixin.blocklikeentities.ServerWorldMixin (incubus_core.mixins.json)
+		dev.architectury.mixin.fabric.MixinServerLevel (architectury.mixins.json)
+		com.sonicether.soundphysics.mixin.ServerWorldMixin (sound_physics_remastered.mixins.json)
+		org.betterx.betterend.mixin.common.ServerLevelMixin (betterend.mixins.common.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.ServerLevelMixin (porting_lib_base.mixins.json)
+		dev.architectury.mixin.fabric.ExplosionPreInvoker (architectury.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.block_entity_ticking.sleeping.ServerWorldMixin (lithium.mixins.json)
+		net.fabricmc.fabric.mixin.lookup.ServerWorldMixin (fabric-api-lookup-api-v1.mixins.json)
+		com.github.teamfusion.rottencreatures.mixin.common.ServerLevelMixin (rottencreatures-common.mixins.json)
+		io.github.apace100.apoli.mixin.ServerWorldMixin (apoli.mixins.json)
+		net.spellbladenext.fabric.mixin.VerticalMixin (spellbladenext.mixins.json)
+		com.terraformersmc.cinderscapes.mixin.MixinServerWorld (mixins.cinderscapes-common.json)
+		com.github.clevernucleus.playerex.mixin.ServerWorldMixin (playerex.mixins.json)
+		net.spellbladenext.fabric.mixin.SpellMixin (spellbladenext.mixins.json)
+		me.jellysquid.mods.lithium.mixin.util.entity_movement_tracking.ServerWorldAccessor (lithium.mixins.json)
+		moriyashiine.bewitchment.mixin.curse.ServerWorldMixin (bewitchment.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.inactive_navigations.ServerWorldMixin (lithium.mixins.json)
+		me.shedaniel.cloth.mixin.common.events.MixinServerWorld (cloth-common-events-v1.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.chunk_random.ServerWorldMixin (lithium.mixins.json)
+		io.github.fabricators_of_create.porting_lib.transfer.mixin.common.ServerLevelMixin (porting_lib_transfer.mixins.json)
+		net.spellbladenext.fabric.mixin.AirMixin (spellbladenext.mixins.json)
+		org.betterx.bclib.mixin.common.ServerLevelMixin (bclib.mixins.common.json)
+		potionstudios.byg.mixin.common.world.MixinServerLevel (byg.mixins.json)
+		fuzs.leavesbegone.mixin.ServerLevelMixin (leavesbegone.common.mixins.json)
+		me.steinborn.krypton.mixin.server.fastchunkentityaccess.ServerWorldMixin (krypton.mixins.json)
+		winterly.mixin.common.ServerWorldMixin (winterly.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.world.ServerWorldMixin (the_bumblezone.mixins.json)
+		svenhjol.charm.mixin.event.AddEntityServerMixin (charm.mixins.json)
+		com.faboslav.friendsandfoes.mixin.ServerWorldAccessor (friendsandfoes-common.mixins.json)
+		snownee.snow.mixin.ServerLevelMixin (snowrealmagic.mixins.json)
+		net.adventurez.mixin.ServerWorldMixin (adventurez.mixins.json)
+		moriyashiine.bewitchment.mixin.ServerWorldMixin (bewitchment.mixins.json)
+		uk.me.desert_island.rer.mixin.MixinServerWorld (roughlyenoughresources.mixins.json)
+		dev.onyxstudios.cca.mixin.entity.common.MixinServerWorld (mixins.cardinal_components_entity.json)
+		net.barribob.boss.mixin.ExplosionMixin (bosses.mixins.json)
+		me.jellysquid.mods.lithium.mixin.chunk.entity_class_groups.ServerWorldAccessor (lithium.mixins.json)
+		me.lucko.spark.fabric.mixin.ServerWorldAccessor (spark.mixins.json)
+		net.spellbladenext.fabric.mixin.EchoMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.FlameWindsMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.BarrierMixin (spellbladenext.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.ServerWorldMixin (fabric-lifecycle-events-v1.mixins.json)
+		alternate.current.mixin.ServerLevelMixin (alternate-current.mixins.json)
+		net.wizards.mixin.effect.ServerWorldFrostShield (wizards.mixins.json)
+		net.spellbladenext.fabric.mixin.TNTmixin (spellbladenext.mixins.json)
+		com.ordana.immersive_weathering.mixins.ServerLevelMixin (immersive_weathering-common.mixins.json)
+		com.t2pellet.strawgolem.mixin.LoginMixin (strawgolem.fabric.mixins.json)
+		ca.spottedleaf.starlight.mixin.common.world.ServerWorldMixin (starlight.mixins.json)
+		net.spellbladenext.fabric.mixin.ThornMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.BouncingMixin (spellbladenext.mixins.json)
+	net.minecraft.class_1937:
+		net.fabricmc.fabric.mixin.event.lifecycle.WorldMixin (fabric-lifecycle-events-v1.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.LevelMixin (porting_lib_base.mixins.json)
+		party.lemons.biomemakeover.mixin.multipart.LevelMixin (biomemakeover-common.mixins.json)
+		me.jellysquid.mods.lithium.mixin.util.block_entity_retrieval.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.inline_block_access.WorldMixin (lithium.mixins.json)
+		com.t2pellet.strawgolem.mixin.GrowthMixin (strawgolem.fabric.mixins.json)
+		dev.architectury.mixin.fabric.ExplosionPreInvoker (architectury.mixins.json)
+		dev.onyxstudios.cca.mixin.world.common.MixinWorld (mixins.cardinal_components_world.json)
+		com.telepathicgrunt.the_bumblezone.mixin.world.LevelMixin (the_bumblezone.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.entity.LevelMixin (porting_lib_entity.mixins.json)
+		eu.pb4.polymer.mixin.other.WorldAccessor (polymer.mixins.json)
+		org.betterx.betterend.mixin.common.LevelMixin (betterend.mixins.common.json)
+		me.jellysquid.mods.lithium.mixin.world.chunk_access.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.chunk_random.WorldMixin (lithium.mixins.json)
+		dev.lambdaurora.lambdynlights.mixin.WorldMixin (lambdynlights.mixins.json)
+		net.blay09.mods.balm.mixin.LevelMixin (balm.mixins.json)
+		io.github.fabricators_of_create.porting_lib.transfer.mixin.common.LevelMixin (porting_lib_transfer.mixins.json)
+		com.ishland.uwrad.mixin.MixinWorld (unsafe-world-random-access-detector.mixins.json)
+		ca.spottedleaf.starlight.mixin.common.world.LevelMixin (starlight.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.inline_height.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.block_entity_ticking.sleeping.WorldMixin (lithium.mixins.json)
+	net.minecraft.class_1297:
+		virtuoel.pehkui.mixin.EntityMixin (pehkui.mixins.json)
+		net.fabricmc.fabric.mixin.dimension.EntityMixin (fabric-dimensions-v1.mixins.json)
+		io.github.apace100.origins.mixin.SelectionInvulnerabilityMixin (origins.mixins.json)
+		moriyashiine.bewitchment.mixin.ritual.EntityMixin (bewitchment.mixins.json)
+		net.mehvahdjukaar.supplementaries.mixins.EntityMixin (supplementaries-common.mixins.json)
+		dev.architectury.mixin.fabric.MixinEntity (architectury.mixins.json)
+		net.orcinus.galosphere.mixin.EntityMixin (galosphere.mixins.json)
+		virtuoel.pehkui.mixin.compat116plus.EntityMixin (pehkui.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.entities.EntityMixin (the_bumblezone.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.accessor.EntityAccessor (porting_lib_accessors.mixins.json)
+		net.fabricmc.fabric.mixin.entity.event.EntityMixin (fabric-entity-events-v1.mixins.json)
+		dev.banzetta.droplight.mixin.EntityMixin (droplight.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.collisions.movement.EntityMixin (lithium.mixins.json)
+		eu.pb4.polymer.mixin.entity.EntityAccessor (polymer.mixins.json)
+		moriyashiine.bewitchment.mixin.pledge.EntityMixin (bewitchment.mixins.json)
+		eu.ha3.presencefootsteps.mixins.IEntity (presencefootsteps.mixin.json)
+		io.github.stuff_stuffs.multipart_entities.mixin.common.MixinEntity (MultipartEntities.mixins.json)
+		net.blay09.mods.netherportalfix.mixin.EntityAccessor (netherportalfix.mixins.json)
+		net.id.paradiselost.mixin.entity.EntityMixin (paradise_lost.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.collisions.fluid.EntityMixin (lithium.mixins.json)
+		party.lemons.biomemakeover.mixin.enchantment.EntityMixin (biomemakeover-common.mixins.json)
+		atonkish.quartzelv.mixin.EntityMixin (quartzelv.mixins.json)
+		com.glisco.things.mixin.EntityMixin (things.mixins.json)
+		dev.banzetta.droplight.mixin.client.EntityMixin (droplight.mixins.json)
+		ht.treechop.mixin.EntityChopSettingsMixin (treechop.mixins.json)
+		net.blay09.mods.balm.mixin.EntityMixin (balm.mixins.json)
+		dev.isxander.debugify.mixins.basic.mc2025.EntityMixin (debugify.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.collisions.unpushable_cramming.EntityMixin (lithium.mixins.json)
+		virtuoel.pehkui.mixin.compat117plus.EntityMixin (pehkui.mixins.json)
+		tschipp.carryon.mixin.EntityMixin (carryon.mixins.json)
+		dev.lambdaurora.lambdynlights.mixin.lightsource.EntityMixin (lambdynlights.lightsource.mixins.json)
+		dev.cammiescorner.icarus.core.mixins.EntityMixin (icarus.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.skip_fire_check.EntityMixin (lithium.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.EntityMixin (porting_lib_base.mixins.json)
+		moriyashiine.bewitchment.mixin.vampirehack.FireToSunDamageMixin (bewitchment.vampirehacks.mixins.json)
+		virtuoel.pehkui.mixin.compat117plus.EntityCalculateDimensionsMixin (pehkui.mixins.json)
+		io.github.apace100.apoli.mixin.EntityAccessor (apoli.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.entities.EntityAccessor (the_bumblezone.mixins.json)
+		ru.fewizz.crawl.mixin.EntityMixin (mixins.crawl.json)
+		net.kyrptonaught.customportalapi.mixin.EntityMixin (customportalapi.mixins.json)
+		io.github.fabricators_of_create.porting_lib.attributes.mixin.EntityMixin (porting_lib_attributes.common.mixins.json)
+		com.github.thedeathlycow.moregeodes.mixin.StepSoundMixin (geodes.mixins.json)
+		dev.onyxstudios.cca.mixin.entity.common.MixinEntity (mixins.cardinal_components_entity.json)
+		dev.isxander.debugify.mixins.basic.mc206922.EntityMixin (debugify.mixins.json)
+		paulevs.edenring.mixin.common.EntityMixin (edenring.mixins.common.json)
+		dev.tr7zw.entityculling.mixin.CullableMixin (entityculling.mixins.json)
+		com.github.mim1q.minecells.mixin.entity.EntityMixin (minecells.mixins.json)
+		moriyashiine.bewitchment.mixin.vampirehack.RemoveFireInvulnerabilityMixin (bewitchment.vampirehacks.mixins.json)
+		net.darkhax.bookshelf.mixin.entity.AccessorEntity (bookshelf.common.mixins.json)
+		moriyashiine.bewitchment.mixin.vampirehack.EntityMixin (bewitchment.vampirehacks.mixins.json)
+		dev.mrsterner.besmirchment.mixin.EntityMixin (besmirchment.mixins.json)
+		moriyashiine.bewitchment.mixin.curse.EntityMixin (bewitchment.mixins.json)
+		dev.cafeteria.fakeplayerapi.mixin.EntityMixin (fake-player-api.mixins.json)
+		fuzs.bettertridents.mixin.EntityMixin (bettertridents.fabric.mixins.json)
+		io.github.apace100.apoli.mixin.EntityMixin (apoli.mixins.json)
+		org.betterx.betterend.mixin.common.EntityMixin (betterend.mixins.common.json)
+		net.adventurez.mixin.accessor.EntityAccessor (adventurez.mixins.json)
+		com.sonicether.soundphysics.mixin.EntityMixin (sound_physics_remastered.mixins.json)
+		safro.archon.mixin.EntityMixin (archon.mixins.json)
+		net.environmentz.mixin.access.EntityAccessor (environmentz.mixins.json)
+		net.spell_engine.mixin.client.render.EntityMixin (spell_engine.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.deep_passengers.EntityMixin (lithium.mixins.json)
+		moriyashiine.bewitchment.mixin.transformation.EntityMixin (bewitchment.mixins.json)
+		eu.pb4.polymer.mixin.client.entity.EntityMixin (polymer.mixins.json)
+		moriyashiine.bewitchment.mixin.EntityMixin (bewitchment.mixins.json)
+		dev.emi.stepheightentityattribute.mixin.EntityMixin (stepheightentityattribute.mixins.json)
+	net.minecraft.class_1355:
+		party.lemons.biomemakeover.mixin.GoalSelectorMixin (biomemakeover-common.mixins.json)
+		me.jellysquid.mods.lithium.mixin.collections.goals.GoalSelectorMixin (lithium.mixins.json)
+	net.minecraft.class_1308:
+		chronosacaria.mcdar.mixin.MobEntityAccessor (mcdar.mixins.json)
+		net.darkhax.bookshelf.mixin.entity.AccessorMob (bookshelf.common.mixins.json)
+		com.ineffa.wondrouswilds.mixin.MobEntityAccessor (wondrouswilds.mixins.json)
+		dev.mrsterner.guardvillagers.mixin.MobEntityAccessor (guardvillagers.mixins.json)
+		com.starfish_studios.naturalist.mixin.MobMixin (naturalist-common.mixins.json)
+		net.rpgdifficulty.mixin.MobEntityMixin (rpgdifficulty.mixins.json)
+		com.izofar.takesapillage.mixin.MobRememberSpawnReasonMixin (takesapillage.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.accessor.MobAccessor (porting_lib_accessors.mixins.json)
+		party.lemons.biomemakeover.mixin.MobAccess (biomemakeover-common.mixins.json)
+		tech.thatgravyboat.goodall.mixin.MobEntityAccessor (goodall-common.mixins.json)
+		com.github.clevernucleus.dataattributes.mixin.MobEntityMixin (dataattributes.mixins.json)
+		net.nameplate.mixin.MobEntityMixin (nameplate.mixins.json)
+		immersive_armors.mixin.MobEntityMixin (immersive_armors.mixins.json)
+		tech.thatgravyboat.goodall.mixin.MobEntityMixin (goodall-common.mixins.json)
+		com.tiviacz.travelersbackpack.mixin.abilities.GhastEntityMixin (travelersbackpack.mixins.json)
+		net.mehvahdjukaar.moonlight.core.mixins.EntityMixin (moonlight-common.mixins.json)
+		dev.mrsterner.besmirchment.mixin.MobEntityMixin (besmirchment.mixins.json)
+		moriyashiine.bewitchment.mixin.contract.MobEntityMixin (bewitchment.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.MobMixin (porting_lib_base.mixins.json)
+		moriyashiine.bewitchment.mixin.MobEntityMixin (bewitchment.mixins.json)
+		fuzs.bettertridents.mixin.MobMixin (bettertridents.common.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.inactive_navigations.MobEntityMixin (lithium.mixins.json)
+		com.ineffa.wondrouswilds.mixin.MobEntityMixin (wondrouswilds.mixins.json)
+		moriyashiine.bewitchment.mixin.pledge.MobEntityMixin (bewitchment.mixins.json)
+		net.hyper_pigeon.eldritch_mobs.mixin.MobEntityMixin (eldritch_mobs.mixins.json)
+		chronosacaria.mcdar.mixin.MobEntityMixin (mcdar.mixins.json)
+		virtuoel.pehkui.mixin.MobEntityMixin (pehkui.mixins.json)
+		chronosacaria.mcdw.mixin.MobEntityAccessor (mcdw.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.items.HoneyShieldMobMixin (the_bumblezone.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.skip_equipment_change_check.MobEntityMixin (lithium.mixins.json)
+		net.spell_engine.mixin.action_impair.MobEntityActionImpairing (spell_engine.mixins.json)
+		dev.mrsterner.bewitchmentplus.mixin.common.MobEntityAccessor (bewitchmentplus.mixins.json)
+		virtuoel.pehkui.mixin.compat116plus.MobEntityMixin (pehkui.mixins.json)
+		com.frikinjay.lmd.mixin.MobEntityMixin (lmd.mixins.json)
+		moriyashiine.bewitchment.mixin.curse.MobEntityMixin (bewitchment.mixins.json)
+	net.minecraft.class_1309:
+		moriyashiine.bewitchment.mixin.familiar.LivingEntityMixin (bewitchment.mixins.json)
+		com.github.clevernucleus.relicex.mixin.LivingEntityMixin (relicex.mixins.json)
+		net.spell_power.mixin.LivingEntityMixin (spell_power.mixins.json)
+		io.github.fabricators_of_create.porting_lib.attributes.mixin.LivingEntityMixin (porting_lib_attributes.common.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.skip_equipment_change_check.LivingEntityMixin (lithium.mixins.json)
+		com.github.mim1q.minecells.mixin.entity.LivingEntityMixin (minecells.mixins.json)
+		com.glisco.things.mixin.LivingEntityMixin (things.mixins.json)
+		dev.emi.stepheightentityattribute.mixin.LivingEntityMixin (stepheightentityattribute.mixins.json)
+		com.chefsdelights.farmersrespite.core.mixin.LivingEntityCaffeinatedImmunitiesMixin (farmersrespite.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.enum_values.LivingEntityMixin (lithium.mixins.json)
+		net.darkhax.bookshelf.mixin.entity.MixinLivingEntity (bookshelf.common.mixins.json)
+		com.nhoryzon.mc.farmersdelight.mixin.LivingEntityKnockBackMixin (farmersdelight.mixins.json)
+		paulevs.edenring.mixin.common.LivingEntityMixin (edenring.mixins.common.json)
+		timefall.mcsa.mixin.LivingEntityMixin (mcsa-common.mixins.json)
+		virtuoel.pehkui.mixin.compat115plus.LivingEntityMixin (pehkui.mixins.json)
+		samebutdifferent.ecologics.mixin.LivingEntityMixin (ecologics-common.mixins.json)
+		net.medievalweapons.mixin.client.ClientLivingEntityMixin (medievalweapons.mixins.json)
+		safro.archon.mixin.LivingEntityMixin (archon.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.fast_elytra_check.LivingEntityMixin (lithium.mixins.json)
+		virtuoel.pehkui.mixin.LivingEntityMixin (pehkui.mixins.json)
+		timefall.mcsa.mixin.LivingEntityPlayerEntityMixin (mcsa-common.mixins.json)
+		io.github.overlordsiii.villagernames.mixin.LivingEntityMixin (villagernames.mixins.json)
+		party.lemons.biomemakeover.mixin.LivingEntityMixin (biomemakeover-common.mixins.json)
+		net.dragonloot.mixin.LivingEntityMixin (dragonloot.mixins.json)
+		wraith.fwaystones.mixin.LivingEntityMixin (fwaystones.mixins.json)
+		svenhjol.charm.mixin.gentle_potion_particles.RenderTranslucentParticleMixin (charm.mixins.json)
+		moriyashiine.bewitchment.mixin.ritual.LivingEntityMixin (bewitchment.mixins.json)
+		moriyashiine.bewitchment.mixin.vampirehack.FireToSunDamageMixin (bewitchment.vampirehacks.mixins.json)
+		com.yungnickyoung.minecraft.betterdeserttemples.mixin.PharaohKilledMixin (betterdeserttemples.mixins.json)
+		eu.ha3.presencefootsteps.mixins.ILivingEntity (presencefootsteps.mixin.json)
+		io.github.apace100.origins.mixin.LikeWaterMixin (origins.mixins.json)
+		fuzs.bettertridents.mixin.LivingEntityMixin (bettertridents.common.mixins.json)
+		net.fabricmc.fabric.mixin.item.LivingEntityMixin (fabric-item-api-v1.mixins.json)
+		com.glisco.conjuring.mixin.LivingEntityMixin (conjuring.mixins.json)
+		dev.mrsterner.bewitchmentplus.mixin.common.LivingEntityMixin (bewitchmentplus.mixins.json)
+		net.darkhax.bookshelf.mixin.entity.AccessorLivingEntity (bookshelf.common.mixins.json)
+		daniking.vinery.mixin.LivingEntityMixin (vinery.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.collisions.unpushable_cramming.LivingEntityMixin (lithium.mixins.json)
+		eu.ha3.presencefootsteps.mixins.MLivingEntity (presencefootsteps.mixin.json)
+		party.lemons.biomemakeover.mixin.enchantment.LivingEntityMixin (biomemakeover-common.mixins.json)
+		com.natamus.collective.fabric.mixin.LivingEntityMixin (collective-fabric.mixins.json)
+		visuality.mixin.LivingEntityMixin (visuality.mixins.json)
+		moriyashiine.bewitchment.mixin.sigil.LivingEntityMixin (bewitchment.mixins.json)
+		net.moddingplayground.frame.mixin.contentregistries.state.LivingEntityMixin (frame-content-registries-v0.mixins.json)
+		net.blay09.mods.netherportalfix.mixin.LivingEntityAccessor (netherportalfix.mixins.json)
+		dev.emi.trinkets.mixin.accessor.LivingEntityAccessor (trinkets.mixins.json)
+		com.jamieswhiteshirt.reachentityattributes.mixin.LivingEntityMixin (mixins.reach-entity-attributes.json)
+		com.b1n_ry.yigd.mixin.LivingEntityMixin (yigd.mixins.json)
+		moriyashiine.bewitchment.mixin.brew.LivingEntityAccessor (bewitchment.mixins.json)
+		net.wizards.mixin.effect.LivingEntityFrostShield (wizards.mixins.json)
+		net.soulsweaponry.mixin.LivingEntityMixin (soulsweapons.mixins.json)
+		io.github.apace100.apoli.mixin.LivingEntityMixin (apoli.mixins.json)
+		dev.itsmeow.whisperwoods.mixin.LivingEntityMixin (whisperwoods.mixins.json)
+		dev.emi.trinkets.mixin.LivingEntityMixin (trinkets.mixins.json)
+		party.lemons.biomemakeover.mixin.LivingEntityMixin_Lootblock (biomemakeover-common.mixins.json)
+		com.anthonyhilyard.iceberg.mixin.LivingEntityMixin (iceberg.mixins.json)
+		com.affehund.voidtotem.mixin.LivingEntityMixin (voidtotem.mixins.json)
+		svenhjol.charm.mixin.event.EntityJumpMixin (charm.mixins.json)
+		com.scouter.netherdepthsupgrade.mixin.MovementSpeed (netherdepthsupgrade.mixins.json)
+		atonkish.quartzelv.mixin.LivingEntityMixin (quartzelv.mixins.json)
+		eu.pb4.polymer.mixin.entity.LivingEntityMixin (polymer.mixins.json)
+		ru.fewizz.crawl.mixin.LivingEntityMixin (mixins.crawl.json)
+		me.jellysquid.mods.lithium.mixin.entity.fast_hand_swing.LivingEntityMixin (lithium.mixins.json)
+		dev.isxander.debugify.mixins.basic.mc84873.LivingEntityMixin (debugify.mixins.json)
+		de.dafuqs.additionalentityattributes.mixin.common.LivingEntityMixin (additionalentityattributes.mixins.json)
+		svenhjol.charm.mixin.variant_ladders.ClimbTrapdoorMixin (charm.mixins.json)
+		chronosacaria.mcdw.mixin.LivingEntityMixin (mcdw.mixins.json)
+		net.spell_engine.mixin.action_impair.LivingEntityActionImpairing (spell_engine.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.LivingEntityMixin (fabric-lifecycle-events-v1.mixins.json)
+		net.soulsweaponry.mixin.LivingEntityInvoker (soulsweapons.mixins.json)
+		moriyashiine.bewitchment.mixin.contract.LivingEntityMixin (bewitchment.mixins.json)
+		moriyashiine.bewitchment.mixin.LivingEntityMixin (bewitchment.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.items.HoneyShieldLivingEntityMixin (the_bumblezone.mixins.json)
+		draylar.tiered.mixin.LivingEntityMixin (tiered.mixins.json)
+		moriyashiine.bewitchment.mixin.fortune.LivingEntityMixin (bewitchment.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.LivingEntityMixin (porting_lib_base.mixins.json)
+		net.rpgdifficulty.mixin.LivingEntityMixin (rpgdifficulty.mixins.json)
+		net.spellbladenext.fabric.mixin.EntityMixin (spellbladenext.mixins.json)
+		chronosacaria.mcdw.mixin.LivingEntityPlayerEntityMixin (mcdw.mixins.json)
+		org.betterx.bclib.mixin.common.elytra.LivingEntityMixin (bclib.mixins.common.json)
+		net.spell_engine.mixin.LivingEntityAccessor (spell_engine.mixins.json)
+		virtuoel.pehkui.mixin.compat117plus.LivingEntityMixin (pehkui.mixins.json)
+		party.lemons.biomemakeover.mixin.totem.LivingEntityMixin (biomemakeover-common.mixins.json)
+		net.wizards.mixin.effect.LivingEntityFrozen (wizards.mixins.json)
+		immersive_armors.mixin.MixinLivingEntity (immersive_armors.mixins.json)
+		fuzs.tinyskeletons.mixin.accessor.LivingEntityAccessor (tinyskeletons.common.mixins.json)
+		dev.mrsterner.besmirchment.mixin.LivingEntityMixin (besmirchment.mixins.json)
+		net.hyper_pigeon.eldritch_mobs.mixin.LivingEntityMixin (eldritch_mobs.mixins.json)
+		net.fabricmc.fabric.mixin.entity.event.elytra.LivingEntityMixin (fabric-entity-events-v1.mixins.json)
+		net.orcinus.galosphere.mixin.access.LivingEntityAccessor (galosphere.mixins.json)
+		com.github.mim1q.minecells.mixin.entity.LivingEntityInvoker (minecells.mixins.json)
+		fuzs.bettertridents.mixin.FabricLivingEntityMixin (bettertridents.fabric.mixins.json)
+		com.github.teamfusion.rottencreatures.mixin.common.LivingEntityMixin (rottencreatures-common.mixins.json)
+		chronosacaria.mcda.mixin.LivingEntityMixin (mcda.mixins.json)
+		net.dungeon_difficulty.mixin.LivingEntityMixin (dungeon_difficulty.mixins.json)
+		moriyashiine.bewitchment.mixin.brew.LivingEntityMixin (bewitchment.mixins.json)
+		dev.isxander.debugify.client.mixins.basic.mc93384.LivingEntityMixin (debugify.client.mixins.json)
+		net.adventurez.mixin.accessor.LivingEntityAccessor (adventurez.mixins.json)
+		svenhjol.charm.mixin.event.EntityHurtMixin (charm.mixins.json)
+		com.illusivesoulworks.charmofundying.mixin.MixinLivingEntity (charmofundying.mixins.json)
+		dev.tr7zw.notenoughanimations.mixins.LivingEntityMixin (notenoughanimations.mixins.json)
+		dev.isxander.debugify.mixins.basic.mc30391.LivingEntityMixin (debugify.mixins.json)
+		net.spell_engine.mixin.LivingEntityMixin (spell_engine.mixins.json)
+		svenhjol.charm.mixin.event.EntityDropItemsMixin (charm.mixins.json)
+		net.mehvahdjukaar.snowyspirit.mixins.EntityMixin (snowyspirit-common.mixins.json)
+		ca.fxco.memoryleakfix.mixin.entityMemoriesLeak.LivingEntity_clearMemoriesMixin (memoryleakfix.mixins.json)
+		moriyashiine.bewitchment.mixin.curse.LivingEntityMixin (bewitchment.mixins.json)
+		net.medievalweapons.mixin.LivingEntityMixin (medievalweapons.mixins.json)
+		moriyashiine.bewitchment.mixin.trinket.LivingEntityMixin (bewitchment.mixins.json)
+		net.barribob.boss.mixin.LivingEntityMixin (bosses.mixins.json)
+		io.github.apace100.origins.mixin.WaterBreathingMixin$CanBreatheInWater (origins.mixins.json)
+		net.id.paradiselost.mixin.entity.LivingEntityMixin (paradise_lost.mixins.json)
+		virtuoel.pehkui.mixin.compat116plus.LivingEntityMixin (pehkui.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.entities.LivingEntityAccessor (the_bumblezone.mixins.json)
+		com.tiviacz.travelersbackpack.mixin.LivingEntityMixin (travelersbackpack.mixins.json)
+		org.betterx.betterend.mixin.common.LivingEntityMixin (betterend.mixins.common.json)
+		safro.zenith.mixin.LivingEntityMixin (zenith.mixins.json)
+		net.fabricmc.fabric.mixin.entity.event.LivingEntityMixin (fabric-entity-events-v1.mixins.json)
+		dev.lambdaurora.lambdynlights.mixin.lightsource.LivingEntityMixin (lambdynlights.lightsource.mixins.json)
+		moriyashiine.bewitchment.mixin.poppet.LivingEntityMixin (bewitchment.mixins.json)
+		net.blay09.mods.balm.mixin.LivingEntityMixin (balm.mixins.json)
+		net.projectile_damage.mixin.LivingEntityMixin (projectile_damage.mixins.json)
+		net.orcinus.galosphere.mixin.LivingEntityMixin (galosphere.mixins.json)
+		moriyashiine.bewitchment.mixin.transformation.LivingEntityMixin (bewitchment.mixins.json)
+		svenhjol.charm.mixin.event.EntityDropXpMixin (charm.mixins.json)
+		net.bettercombat.mixin.LivingEntityMixin (bettercombat.mixins.json)
+		dev.architectury.mixin.fabric.LivingDeathInvoker (architectury.mixins.json)
+		net.spell_engine.mixin.effect.LivingEntityStatusEffectSync (spell_engine.mixins.json)
+		io.github.apace100.apoli.mixin.EntityParticleMixin (apoli.mixins.json)
+		draylar.wolveswitharmor.mixin.LivingEntityMixin (wolves-with-armor.mixins.json)
+		nourl.mythicmetals.mixin.LivingEntityMixin (mythicmetals.mixins.json)
+		io.github.apace100.apoli.mixin.EyeHeightAccess (apoli.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.accessor.LivingEntityAccessor (porting_lib_accessors.mixins.json)
+		svenhjol.charm.mixin.totem_works_from_inventory.CheckInventoryMixin (charm.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.fast_powder_snow_check.LivingEntityMixin (lithium.mixins.json)
+		net.mehvahdjukaar.supplementaries.mixins.LivingEntityMixin (supplementaries-common.mixins.json)
+		dev.isxander.debugify.client.mixins.gameplay.mc12829.LivingEntityMixin (debugify.client.mixins.json)
+		net.bettercombat.mixin.LivingEntityAccessor (bettercombat.mixins.json)
+		com.github.clevernucleus.playerex.mixin.LivingEntityMixin (playerex.mixins.json)
+		moriyashiine.bewitchment.mixin.pledge.LivingEntityMixin (bewitchment.mixins.json)
+		dev.architectury.mixin.fabric.MixinLivingEntity (architectury.mixins.json)
+		com.github.clevernucleus.dataattributes.mixin.LivingEntityMixin (dataattributes.mixins.json)
+		com.nhoryzon.mc.farmersdelight.mixin.LivingEntityBackstabbingEnchantmentMixin (farmersdelight.mixins.json)
+		ladysnake.illuminations.mixin.LivingEntityMixin (illuminations.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.entities.LivingEntityMixin (the_bumblezone.mixins.json)
+		chronosacaria.mcdar.mixin.LivingEntityMixin (mcdar.mixins.json)
+		net.spell_engine.mixin.client.LivingEntityVisualMixin (spell_engine.mixins.json)
+		dev.mrsterner.guardvillagers.mixin.LivingEntityMixin (guardvillagers.mixins.json)
+	net.minecraft.class_1588:
+		org.betterx.betterend.mixin.common.MonsterMixin (betterend.mixins.common.json)
+		party.lemons.biomemakeover.mixin.MonsterMixin_Lootblock (biomemakeover-common.mixins.json)
+		com.starfish_studios.naturalist.mixin.MonsterMixin (naturalist-common.mixins.json)
+	net.minecraft.class_3763:
+		me.jellysquid.mods.lithium.mixin.ai.raid.RaiderEntityMixin (lithium.mixins.json)
+		io.github.overlordsiii.villagernames.mixin.illager.RaiderEntityMixin (villagernames.mixins.json)
+		com.t2pellet.strawgolem.mixin.RaiderMixin (strawgolem.fabric.mixins.json)
+	net.minecraft.class_1640:
+		party.lemons.biomemakeover.mixin.WitchMixin_Antidote (biomemakeover-common.mixins.json)
+		party.lemons.biomemakeover.mixin.WitchMixin_Quests (biomemakeover-common.mixins.json)
+		com.fizzware.dramaticdoors.mixin.WitchMixin (dramaticdoors.mixins.json)
+	net.minecraft.class_5574:
+		me.jellysquid.mods.lithium.mixin.collections.entity_ticking.EntityListMixin (lithium.mixins.json)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:witch (net.minecraft.class_1640)
+	Entity ID: 207
+	Entity Name: Kitti Tursi the Witch
+	Entity's Exact location: 325.35, 64.00, -1234.66
+	Entity's Block location: World: (325,64,-1235), Section: (at 5,0,13 in 20,4,-78; chunk contains blocks 320,-64,-1248 to 335,319,-1233), Region: (0,-3; contains chunks 0,-96 to 31,-65, blocks 0,-64,-1536 to 511,319,-1025)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: null
+Stacktrace:
+	at net.minecraft.class_1937.method_18472(class_1937.java:466)
+	at net.minecraft.class_3218.method_31420(class_3218.java:371)
+	at net.minecraft.class_5574.method_31791(class_5574.java:54)
+	at net.minecraft.class_3218.method_18765(class_3218.java:339)
+	at net.minecraft.server.MinecraftServer.method_3813(MinecraftServer.java:875)
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:819)
+	at net.minecraft.class_1132.method_3748(class_1132.java:98)
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Mixins in Stacktrace:
+	net.minecraft.class_1937:
+		net.fabricmc.fabric.mixin.event.lifecycle.WorldMixin (fabric-lifecycle-events-v1.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.LevelMixin (porting_lib_base.mixins.json)
+		party.lemons.biomemakeover.mixin.multipart.LevelMixin (biomemakeover-common.mixins.json)
+		me.jellysquid.mods.lithium.mixin.util.block_entity_retrieval.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.inline_block_access.WorldMixin (lithium.mixins.json)
+		com.t2pellet.strawgolem.mixin.GrowthMixin (strawgolem.fabric.mixins.json)
+		dev.architectury.mixin.fabric.ExplosionPreInvoker (architectury.mixins.json)
+		dev.onyxstudios.cca.mixin.world.common.MixinWorld (mixins.cardinal_components_world.json)
+		com.telepathicgrunt.the_bumblezone.mixin.world.LevelMixin (the_bumblezone.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.entity.LevelMixin (porting_lib_entity.mixins.json)
+		eu.pb4.polymer.mixin.other.WorldAccessor (polymer.mixins.json)
+		org.betterx.betterend.mixin.common.LevelMixin (betterend.mixins.common.json)
+		me.jellysquid.mods.lithium.mixin.world.chunk_access.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.chunk_random.WorldMixin (lithium.mixins.json)
+		dev.lambdaurora.lambdynlights.mixin.WorldMixin (lambdynlights.mixins.json)
+		net.blay09.mods.balm.mixin.LevelMixin (balm.mixins.json)
+		io.github.fabricators_of_create.porting_lib.transfer.mixin.common.LevelMixin (porting_lib_transfer.mixins.json)
+		com.ishland.uwrad.mixin.MixinWorld (unsafe-world-random-access-detector.mixins.json)
+		ca.spottedleaf.starlight.mixin.common.world.LevelMixin (starlight.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.inline_height.WorldMixin (lithium.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.block_entity_ticking.sleeping.WorldMixin (lithium.mixins.json)
+	net.minecraft.class_3218:
+		dev.onyxstudios.cca.mixin.chunk.common.MixinServerWorld (mixins.cardinal_components_chunk.json)
+		net.spellbladenext.fabric.mixin.cleansingfiremixin (spellbladenext.mixins.json)
+		dev.onyxstudios.cca.mixin.world.common.MixinServerWorld (mixins.cardinal_components_world.json)
+		elocindev.ysns.fabric_quilt.mixin.ServerWorldMixin (ysns.fabricmixins.json)
+		svenhjol.charm.mixin.snow_accumulation.PlaceMoreSnowMixin (charm.mixins.json)
+		net.spellbladenext.fabric.mixin.EyeMixin (spellbladenext.mixins.json)
+		net.dungeon_difficulty.mixin.ServerWorldMixin (dungeon_difficulty.mixins.json)
+		eu.pb4.polymer.mixin.entity.ServerWorldAccessor (polymer.mixins.json)
+		party.lemons.biomemakeover.mixin.multipart.ServerLevelMixin (biomemakeover-common.mixins.json)
+		com.slomaxonical.architectspalette.mixin.ServerWorldMixin (architechtspalette.mixins.json)
+		me.jellysquid.mods.lithium.mixin.profiler.ServerWorldMixin (lithium.mixins.json)
+		net.rpgdifficulty.mixin.ServerWorldMixin (rpgdifficulty.mixins.json)
+		net.projectile_damage.mixin.ServerWorldMixin (projectile_damage.mixins.json)
+		com.yungnickyoung.minecraft.betterdeserttemples.mixin.ServerLevelMixin (betterdeserttemples.mixins.json)
+		dev.mrsterner.guardvillagers.mixin.ServerWorldMixin (guardvillagers.mixins.json)
+		com.natamus.collective.fabric.mixin.ServerLevelMixin (collective-fabric.mixins.json)
+		paulevs.edenring.mixin.common.ServerLevelMixin (edenring.mixins.common.json)
+		com.faboslav.friendsandfoes.mixin.ServerWorldMixin (friendsandfoes-common.mixins.json)
+		net.mehvahdjukaar.supplementaries.mixins.ServerLevelMixin (supplementaries-common.mixins.json)
+		net.id.incubus_core.mixin.blocklikeentities.ServerWorldMixin (incubus_core.mixins.json)
+		dev.architectury.mixin.fabric.MixinServerLevel (architectury.mixins.json)
+		com.sonicether.soundphysics.mixin.ServerWorldMixin (sound_physics_remastered.mixins.json)
+		org.betterx.betterend.mixin.common.ServerLevelMixin (betterend.mixins.common.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.ServerLevelMixin (porting_lib_base.mixins.json)
+		dev.architectury.mixin.fabric.ExplosionPreInvoker (architectury.mixins.json)
+		me.jellysquid.mods.lithium.mixin.world.block_entity_ticking.sleeping.ServerWorldMixin (lithium.mixins.json)
+		net.fabricmc.fabric.mixin.lookup.ServerWorldMixin (fabric-api-lookup-api-v1.mixins.json)
+		com.github.teamfusion.rottencreatures.mixin.common.ServerLevelMixin (rottencreatures-common.mixins.json)
+		io.github.apace100.apoli.mixin.ServerWorldMixin (apoli.mixins.json)
+		net.spellbladenext.fabric.mixin.VerticalMixin (spellbladenext.mixins.json)
+		com.terraformersmc.cinderscapes.mixin.MixinServerWorld (mixins.cinderscapes-common.json)
+		com.github.clevernucleus.playerex.mixin.ServerWorldMixin (playerex.mixins.json)
+		net.spellbladenext.fabric.mixin.SpellMixin (spellbladenext.mixins.json)
+		me.jellysquid.mods.lithium.mixin.util.entity_movement_tracking.ServerWorldAccessor (lithium.mixins.json)
+		moriyashiine.bewitchment.mixin.curse.ServerWorldMixin (bewitchment.mixins.json)
+		me.jellysquid.mods.lithium.mixin.entity.inactive_navigations.ServerWorldMixin (lithium.mixins.json)
+		me.shedaniel.cloth.mixin.common.events.MixinServerWorld (cloth-common-events-v1.mixins.json)
+		me.jellysquid.mods.lithium.mixin.alloc.chunk_random.ServerWorldMixin (lithium.mixins.json)
+		io.github.fabricators_of_create.porting_lib.transfer.mixin.common.ServerLevelMixin (porting_lib_transfer.mixins.json)
+		net.spellbladenext.fabric.mixin.AirMixin (spellbladenext.mixins.json)
+		org.betterx.bclib.mixin.common.ServerLevelMixin (bclib.mixins.common.json)
+		potionstudios.byg.mixin.common.world.MixinServerLevel (byg.mixins.json)
+		fuzs.leavesbegone.mixin.ServerLevelMixin (leavesbegone.common.mixins.json)
+		me.steinborn.krypton.mixin.server.fastchunkentityaccess.ServerWorldMixin (krypton.mixins.json)
+		winterly.mixin.common.ServerWorldMixin (winterly.mixins.json)
+		com.telepathicgrunt.the_bumblezone.mixin.world.ServerWorldMixin (the_bumblezone.mixins.json)
+		svenhjol.charm.mixin.event.AddEntityServerMixin (charm.mixins.json)
+		com.faboslav.friendsandfoes.mixin.ServerWorldAccessor (friendsandfoes-common.mixins.json)
+		snownee.snow.mixin.ServerLevelMixin (snowrealmagic.mixins.json)
+		net.adventurez.mixin.ServerWorldMixin (adventurez.mixins.json)
+		moriyashiine.bewitchment.mixin.ServerWorldMixin (bewitchment.mixins.json)
+		uk.me.desert_island.rer.mixin.MixinServerWorld (roughlyenoughresources.mixins.json)
+		dev.onyxstudios.cca.mixin.entity.common.MixinServerWorld (mixins.cardinal_components_entity.json)
+		net.barribob.boss.mixin.ExplosionMixin (bosses.mixins.json)
+		me.jellysquid.mods.lithium.mixin.chunk.entity_class_groups.ServerWorldAccessor (lithium.mixins.json)
+		me.lucko.spark.fabric.mixin.ServerWorldAccessor (spark.mixins.json)
+		net.spellbladenext.fabric.mixin.EchoMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.FlameWindsMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.BarrierMixin (spellbladenext.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.ServerWorldMixin (fabric-lifecycle-events-v1.mixins.json)
+		alternate.current.mixin.ServerLevelMixin (alternate-current.mixins.json)
+		net.wizards.mixin.effect.ServerWorldFrostShield (wizards.mixins.json)
+		net.spellbladenext.fabric.mixin.TNTmixin (spellbladenext.mixins.json)
+		com.ordana.immersive_weathering.mixins.ServerLevelMixin (immersive_weathering-common.mixins.json)
+		com.t2pellet.strawgolem.mixin.LoginMixin (strawgolem.fabric.mixins.json)
+		ca.spottedleaf.starlight.mixin.common.world.ServerWorldMixin (starlight.mixins.json)
+		net.spellbladenext.fabric.mixin.ThornMixin (spellbladenext.mixins.json)
+		net.spellbladenext.fabric.mixin.BouncingMixin (spellbladenext.mixins.json)
+	net.minecraft.class_5574:
+		me.jellysquid.mods.lithium.mixin.collections.entity_ticking.EntityListMixin (lithium.mixins.json)
+	net.minecraft.server.MinecraftServer:
+		svenhjol.charm.mixin.helper.TranslateServerComponentMixin (charm.mixins.json)
+		uk.me.desert_island.rer.mixin.MixinMinecraftServer (roughlyenoughresources.mixins.json)
+		potionstudios.byg.mixin.access.MinecraftServerAccess (byg.mixins.json)
+		net.fabricmc.fabric.mixin.biome.modification.MinecraftServerMixin (fabric-biome-api-v1.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.accessor.MinecraftServerAccessor (porting_lib_accessors.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.MinecraftServerMixin (fabric-lifecycle-events-v1.mixins.json)
+		io.github.ladysnake.impersonate.impl.mixin.MinecraftServerMixin (mixins.impersonate.common.json)
+		com.natamus.collective.fabric.mixin.MinecraftServerMixin (collective-fabric.mixins.json)
+		org.betterx.worlds.together.mixin.common.MinecraftServerMixin (together.mixins.common.json)
+		potionstudios.byg.mixin.server.MixinMinecraftServer (byg.mixins.json)
+		dev.onyxstudios.cca.mixin.scoreboard.MixinMinecraftServer (mixins.cardinal_components_scoreboard.json)
+		net.fabricmc.fabric.mixin.biome.MinecraftServerMixin (fabric-biome-api-v1.mixins.json)
+		net.fabricmc.fabric.mixin.resource.loader.MinecraftServerMixin (fabric-resource-loader-v0.mixins.json)
+		net.blay09.mods.balm.mixin.MinecraftServerMixin (balm.mixins.json)
+		net.fabricmc.fabric.mixin.registry.sync.MinecraftServerMixin (fabric-registry-sync-v0.mixins.json)
+		dev.onyxstudios.cca.mixin.level.common.MixinMinecraftServer (mixins.cardinal_components_level.json)
+		net.fabricmc.fabric.mixin.message.MinecraftServerMixin (fabric-message-api-v1.mixins.json)
+		com.chaosthedude.naturescompass.mixins.ServerMixin (naturescompass.mixins.json)
+		wraith.fwaystones.mixin.MinecraftServerAccessor (fwaystones.mixins.json)
+		org.betterx.bclib.mixin.common.MinecraftServerMixin (bclib.mixins.common.json)
+		org.betterx.worlds.together.mixin.common.MinecraftServerMixinLate (together.mixins.common.json)
+		terrablender.mixin.MixinMinecraftServer (terrablender_fabric.mixins.json)
+	net.minecraft.class_1132:
+		dev.architectury.mixin.fabric.client.MixinIntegratedServer (architectury.mixins.json)
+		io.github.ultimateboomer.smoothboot.mixin.client.IntegratedServerMixin (smoothboot.mixins.json)
+
+-- Affected level --
+Details:
+	All players: 1 total; [class_3222['LARPU'/123, l='ServerLevel[The Golden Land]', x=297.58, y=64.00, z=-1255.25]]
+	Chunk stats: 6304
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-16,65,31), Section: (at 0,1,15 in -1,4,1; chunk contains blocks -16,-64,16 to -1,319,31), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,-64,0 to -1,319,511)
+	Level time: 1441908 game time, 1410308 day time
+	Level name: The Golden Land
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 36478 (now: false), thunder time: 1737 (now: false)
+	Known server brands: fabric
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.method_3813(MinecraftServer.java:875)
+	at net.minecraft.server.MinecraftServer.method_3748(MinecraftServer.java:819)
+	at net.minecraft.class_1132.method_3748(class_1132.java:98)
+	at net.minecraft.server.MinecraftServer.method_29741(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.method_29739(MinecraftServer.java:257)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Mixins in Stacktrace:
+	net.minecraft.server.MinecraftServer:
+		svenhjol.charm.mixin.helper.TranslateServerComponentMixin (charm.mixins.json)
+		uk.me.desert_island.rer.mixin.MixinMinecraftServer (roughlyenoughresources.mixins.json)
+		potionstudios.byg.mixin.access.MinecraftServerAccess (byg.mixins.json)
+		net.fabricmc.fabric.mixin.biome.modification.MinecraftServerMixin (fabric-biome-api-v1.mixins.json)
+		io.github.fabricators_of_create.porting_lib.mixin.common.accessor.MinecraftServerAccessor (porting_lib_accessors.mixins.json)
+		net.fabricmc.fabric.mixin.event.lifecycle.MinecraftServerMixin (fabric-lifecycle-events-v1.mixins.json)
+		io.github.ladysnake.impersonate.impl.mixin.MinecraftServerMixin (mixins.impersonate.common.json)
+		com.natamus.collective.fabric.mixin.MinecraftServerMixin (collective-fabric.mixins.json)
+		org.betterx.worlds.together.mixin.common.MinecraftServerMixin (together.mixins.common.json)
+		potionstudios.byg.mixin.server.MixinMinecraftServer (byg.mixins.json)
+		dev.onyxstudios.cca.mixin.scoreboard.MixinMinecraftServer (mixins.cardinal_components_scoreboard.json)
+		net.fabricmc.fabric.mixin.biome.MinecraftServerMixin (fabric-biome-api-v1.mixins.json)
+		net.fabricmc.fabric.mixin.resource.loader.MinecraftServerMixin (fabric-resource-loader-v0.mixins.json)
+		net.blay09.mods.balm.mixin.MinecraftServerMixin (balm.mixins.json)
+		net.fabricmc.fabric.mixin.registry.sync.MinecraftServerMixin (fabric-registry-sync-v0.mixins.json)
+		dev.onyxstudios.cca.mixin.level.common.MixinMinecraftServer (mixins.cardinal_components_level.json)
+		net.fabricmc.fabric.mixin.message.MinecraftServerMixin (fabric-message-api-v1.mixins.json)
+		com.chaosthedude.naturescompass.mixins.ServerMixin (naturescompass.mixins.json)
+		wraith.fwaystones.mixin.MinecraftServerAccessor (fwaystones.mixins.json)
+		org.betterx.bclib.mixin.common.MinecraftServerMixin (bclib.mixins.common.json)
+		org.betterx.worlds.together.mixin.common.MinecraftServerMixinLate (together.mixins.common.json)
+		terrablender.mixin.MixinMinecraftServer (terrablender_fabric.mixins.json)
+	net.minecraft.class_1132:
+		dev.architectury.mixin.fabric.client.MixinIntegratedServer (architectury.mixins.json)
+		io.github.ultimateboomer.smoothboot.mixin.client.IntegratedServerMixin (smoothboot.mixins.json)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.19.2
+	Minecraft Version ID: 1.19.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 17.0.3, Microsoft
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Microsoft
+	Memory: 2054313344 bytes (1959 MiB) / 8455716864 bytes (8064 MiB) up to 8455716864 bytes (8064 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 9 4900HS with Radeon Graphics         
+	Identifier: AuthenticAMD Family 23 Model 96 Stepping 1
+	Microarchitecture: unknown
+	Frequency (GHz): 2.99
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 2060 with Max-Q Design
+	Graphics card #0 vendor: NVIDIA (0x10de)
+	Graphics card #0 VRAM (MB): 4095.00
+	Graphics card #0 deviceId: 0x1f12
+	Graphics card #0 versionInfo: DriverVersion=31.0.15.3118
+	Graphics card #1 name: AMD Radeon(TM) Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc. (0x1002)
+	Graphics card #1 VRAM (MB): 512.00
+	Graphics card #1 deviceId: 0x1636
+	Graphics card #1 versionInfo: DriverVersion=27.20.11020.14001
+	Memory slot #0 capacity (MB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.20
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.20
+	Memory slot #1 type: DDR4
+	Virtual memory max (MB): 29101.59
+	Virtual memory used (MB): 23546.57
+	Swap memory total (MB): 13312.00
+	Swap memory used (MB): 868.91
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xss1M -Xmx8064m -Xms256m
+	Fabric Mods: 
+		additionalstructures: Additional Structures 4.1.1
+		adorn: Adorn 3.8.1+1.19.2
+		advanced_runtime_resource_pack: Runtime Resource Pack 0.6.4
+		advancementplaques: Advancement Plaques 1.4.6
+		advdebug: Advancements Debug 2.3.0
+		adventurez: AdventureZ 1.4.17
+		alloy_forgery: Alloy Forgery 2.0.19+1.19
+		alternate-current: Alternate Current 1.5.0
+		animatica: Animatica 0.5+1.19
+		another_furniture: Another Furniture 2.1.2-1.19.2
+		architects_palette: Architect's Palette Fabric 2.1.1
+		architectury: Architectury 6.5.69
+		archon: Archon 0.4.1
+			omega-config: OmegaConfig 1.2.3-1.18.1
+		autotag-convention: AutoTag Convention 2.0.0+1.19
+			autotag: AutoTag 2.0.0+1.19
+		badpackets: Bad Packets 0.2.1
+		balm-fabric: Balm 4.5.6
+		barteringstation: Bartering Station 4.0.3
+		bcc: BetterCompatibilityChecker 2.0.2-build.16+mc1.19.1
+		bclib: BCLib 2.1.6
+		beekeeperhut: Friends&Foes - Beekeeper Hut 1.2.0
+		besmirchment: Besmirchment 1.19-8
+			playerabilitylib: Pal 1.6.0
+			reach-entity-attributes: Reach Entity Attributes 2.3.0
+			terraform-wood-api-v1: Terraform Wood API (v1) 4.2.0
+		betteradvancements: Better Advancements 0.2.2.142
+		bettercombat: Better Combat 1.6.2+1.19
+		betterdeserttemples: YUNG's Better Desert Temples 1.19.2-Fabric-2.2.2
+			org_reflections_reflections: reflections 0.10.2
+		betterdungeons: YUNG's Better Dungeons 1.19.2-Fabric-3.2.1
+		betterend: Better End 2.1.4
+		betterfortresses: YUNG's Better Nether Fortresses 1.19.2-Fabric-1.0.5
+		betterfpsdist: Better FPS distance Mod 1.19-2.4
+		bettermineshafts: YUNG's Better Mineshafts 1.19.2-Fabric-3.2.0
+		bettermounthud: Better Mount HUD 1.2.0
+		betternether: Better Nether 7.1.3
+		betteroceanmonuments: YUNG's Better Ocean Monuments 1.19.2-Fabric-2.1.0
+		betterstats: Better Statistics Screen 2.4+1.19.2
+			tcdcommons: TCD Commons API 2.4+1.19.2
+		betterstrongholds: YUNG's Better Strongholds 1.19.2-Fabric-3.2.0
+		bettertridents: Better Tridents 4.0.2
+		betterwitchhuts: YUNG's Better Witch Huts 1.19.2-Fabric-2.1.0
+		bewitchment: Bewitchment 1.19-6
+			impersonate: Impersonate 2.8.0
+			step-height-entity-attribute: Step Height Entity Attribute 1.0.0
+		bhmenu: BHMenu-Fabric 1.19-1.3
+		biomemakeover: Biome Makeover 1.19.2-1.6.2
+		blur: Blur (Fabric) 2.6.0
+			satin: Satin 1.8.0
+		boatbreakfix: Boat Break Fix 1.0.11
+		boatiview: Boat Item View Fabric 0.0.4
+		bookshelf: Bookshelf 16.2.17
+		bosses_of_mass_destruction: Bosses of Mass Destruction (Beta) 1.4.6-1.19.2
+			maelstrom_library: Maelstrom Library 1.3-1.19-pre1
+			multipart_entities: MultipartEntities 1.2-1.19-pre1
+		bountiful: Bountiful 3.0.0
+		bwplus: Bewitchment Plus 1.19-9
+		byg: Oh The Biomes You'll Go 2.0.0.13
+			com_electronwill_night-config_core: core 3.6.6
+			com_electronwill_night-config_toml: toml 3.6.6
+		bygonenether: Bygone Nether 1.2.2
+		cardinal-components: Cardinal Components API 5.0.2
+			cardinal-components-base: Cardinal Components API (base) 5.0.2
+			cardinal-components-block: Cardinal Components API (blocks) 5.0.2
+			cardinal-components-chunk: Cardinal Components API (chunks) 5.0.2
+			cardinal-components-entity: Cardinal Components API (entities) 5.0.2
+			cardinal-components-item: Cardinal Components API (items) 5.0.2
+			cardinal-components-level: Cardinal Components API (world saves) 5.0.2
+			cardinal-components-scoreboard: Cardinal Components API (scoreboard) 5.0.2
+			cardinal-components-world: Cardinal Components API (worlds) 5.0.2
+		carryon: Carry On 2.0.4.6
+		cem: Custom Entity Models 0.7.3-1.19
+			completeconfig-base: completeconfig-base 2.2.0
+			completeconfig-gui-cloth: completeconfig-gui-cloth 2.2.0
+		charm: Charm 4.4.4
+			com_moandjiezana_toml_toml4j: toml4j 0.7.2
+		charmofundying: Charm of Undying 6.1.1+1.19.2
+		charmonium: Charmonium 4.2.1
+		chat_heads: Chat Heads 0.10.6
+		chatpatches: Chat Patches 192.2.1
+		chefsdelight: Chef's Delight 1.0.2-fabric-1.19.2
+			structurized-reborn: Structurized Reborn 1.19-01
+		chunksending: Chunksending Mod 1.19-2.5
+		cinderscapes: Cinderscapes 3.0.3
+			cinderscapes-client: Cinderscapes: Client 3.0.3
+			cinderscapes-common: Cinderscapes: Common 3.0.3
+			cinderscapes-worldgen: Cinderscapes: World Generation 3.0.3
+		citresewn: CIT Resewn 1.1.2+1.19.2
+			citresewn-defaults: CIT Resewn: Defaults 1.1.2+1.19.2
+		cloth-api: Cloth API 4.0.65
+			cloth-basic-math: cloth-basic-math 0.6.1
+			cloth-client-events-v0: Cloth Client Events v0 4.0.65
+			cloth-common-events-v1: Cloth Common Events v1 4.0.65
+			cloth-scissors-api-v1: Cloth Scissors API v1 4.0.65
+			cloth-utils-v1: Cloth Utils v1 4.0.65
+		cloth-config: Cloth Config v8 8.2.88
+		clumps: Clumps 9.0.0+14
+		collective: Collective 6.52
+		colormatic: Colormatic 3.1.2+mc.1.19
+		combatroll: Combat Roll 1.1.5+1.19
+		configured: Configured 2.0.0
+		conjuring: Conjuring 1.0.26+1.19
+		connectivity: Connectivity Mod 1.19.2-3.8
+		continuity: Continuity 2.0.1+1.19
+		controlling: Controlling For Fabric 10.0+7
+		crawl: Crawl 0.11.1
+			mm: Manningham Mills 2.3
+		creaturesfromthesnow: Creatures from The Snow 4.1.0+1.19.2
+		ctov: ChoiceTheorem's Overhauled Villages 3.1.7
+		culturaldelights: Cultural Delights Fabric 0.14.9+1.19.2
+		darkpaintings: DarkPaintings 13.1.5
+		dataattributes: Data Attributes 1.4.2
+		dawn: Dawn API 3.5.0
+		debugify: Debugify 2.8.0
+		decorative_blocks: Decorative Blocks 3.0.0
+		deeperdarker: Deeper and Darker 1.1.6
+			customportalapi: Custom Portal Api 0.0.1-beta54-1.19
+			paragon: Paragon 3.0.2
+				org_yaml_snakeyaml: snakeyaml 1.27
+		deepslatecutting: Deepslate Cutting 1.5.0
+		dehydration: Dehydration 1.3.3
+		dragonloot: DragonLoot 1.1.2
+		dramaticdoors: Dramatic Doors (Fabric) 1.19.2-1.4.2_1
+		drippyloadingscreen: Drippy Loading Screen 1.6.6
+		droplight: Droplight 1.0.5
+		dummmmmmy: MmmMmmMmmMmm 1.19.2-1.7.1
+		dungeon_difficulty: Dungeon Difficulty 2.0.1+1.19
+			com_github_zsoltmolnarrr_tinyconfig: TinyConfig 2.2.2
+		dungeons_arise: When Dungeons Arise 2.1.54
+		easyanvils: Easy Anvils 4.0.9
+		ecologics: Ecologics 2.1.11
+		edenring: EdenRing 0.6.4
+		eldritch_mobs: EldritchMobs 1.12.11
+			polymer: Polymer (Core) 0.2.18+1.19.2
+				packet_tweaker: Packet Tweaker 0.3.0+1.18.2
+				polymer-registry-sync-manipulator: Polymer Registry Sync Manipulator 0.0.3+1.19.2
+			polymer-blocks-ext: Polymer Blocks 0.1.0-alpha.9+1.19.2
+			server_translations_api: Server Translations API 1.4.18+1.19.2
+		elytraslot: Elytra Slot 6.1.0+1.19.2
+		emotecraft: Emotecraft 2.2.5
+			bendy-lib: Bendy api 2.1.2
+		enchdesc: EnchantmentDescriptions 13.0.14
+		endrem: End Remastered 5.2.0
+		entity_texture_features: Entity Texture Features 4.3.3
+			org_apache_httpcomponents_httpmime: httpmime 4.5.10
+		entityculling: EntityCulling-Fabric 1.6.1-mc1.19.2
+		environmentz: EnvironmentZ 1.3.5
+		equipmentcompare: Equipment Compare 1.3.1
+		everycomp: Every Compat 1.19.2-2.2.2
+		expandeddelight: Expanded Delight 0.2.5.2
+		explorify-fabric: Explorify 1.19-1.3.0
+		extrasounds: ExtraSounds 2.3.1+1.19.2-1.19.1
+			soundcategories: Sound Categories 1.2.4+1.19
+		fabric-api: Fabric API 0.75.1+1.19.2
+			fabric-api-base: Fabric API Base 0.4.15+8f4e8eb390
+			fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.14+93d8cb8290
+			fabric-biome-api-v1: Fabric Biome API (v1) 9.1.0+82db024a90
+			fabric-block-api-v1: Fabric Block API (v1) 1.0.2+e415d50e90
+			fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.25+cafc6e8e90
+			fabric-client-tags-api-v1: Fabric Client Tags 1.0.5+b35fea8390
+			fabric-command-api-v1: Fabric Command API (v1) 1.2.16+f71b366f90
+			fabric-command-api-v2: Fabric Command API (v2) 2.2.1+413cbbc790
+			fabric-commands-v0: Fabric Commands (v0) 0.2.33+df3654b390
+			fabric-containers-v0: Fabric Containers (v0) 0.1.41+df3654b390
+			fabric-content-registries-v0: Fabric Content Registries (v0) 3.5.1+7c6cd14d90
+			fabric-convention-tags-v1: Fabric Convention Tags 1.2.2+27265b3490
+			fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.8+aeb40ebe90
+			fabric-data-generation-api-v1: Fabric Data Generation API (v1) 5.3.7+413cbbc790
+			fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.35+0d0f210290
+			fabric-entity-events-v1: Fabric Entity Events (v1) 1.5.4+9244241690
+			fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.34+562bff6e90
+			fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.35+df3654b390
+			fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.24+b6b6abb490
+			fabric-item-api-v1: Fabric Item API (v1) 1.6.5+dce4603e90
+			fabric-item-groups-v0: Fabric Item Groups (v0) 0.3.38+9244241690
+			fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.25+5c4fce2890
+			fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.23+df3654b390
+			fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.2.4+1b46dc7890
+			fabric-loot-api-v2: Fabric Loot API (v2) 1.1.12+83a8659290
+			fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.1.15+9e7660c690
+			fabric-message-api-v1: Fabric Message API (v1) 5.0.7+93d8cb8290
+			fabric-mining-level-api-v1: Fabric Mining Level API (v1) 2.1.23+33fbc73890
+			fabric-models-v0: Fabric Models (v0) 0.3.21+c6af733c90
+			fabric-networking-api-v1: Fabric Networking API (v1) 1.2.11+10eb22f490
+			fabric-networking-v0: Fabric Networking (v0) 0.3.28+df3654b390
+			fabric-object-builder-api-v1: Fabric Object Builder API (v1) 4.2.1+d8ef690890
+			fabric-particles-v1: Fabric Particles (v1) 1.0.14+4d0d570390
+			fabric-recipe-api-v1: Fabric Recipe API (v1) 1.0.1+413cbbc790
+			fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.9.32+9244241690
+			fabric-renderer-api-v1: Fabric Renderer API (v1) 1.2.1+1adbf27790
+			fabric-renderer-indigo: Fabric Renderer - Indigo 0.8.0+1adbf27790
+			fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.24+df3654b390
+			fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.19+6e0787e690
+			fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.0.11+4d0d570390
+			fabric-rendering-v0: Fabric Rendering (v0) 1.1.27+df3654b390
+			fabric-rendering-v1: Fabric Rendering (v1) 1.12.1+d8ef690890
+			fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 2.1.2+aae9039d90
+			fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.8.3+251d254a90
+			fabric-screen-api-v1: Fabric Screen API (v1) 1.0.32+4d0d570390
+			fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.7+1cc24b1b90
+			fabric-sound-api-v1: Fabric Sound API (v1) 1.0.2+c4f28df590
+			fabric-textures-v0: Fabric Textures (v0) 1.0.24+aeb40ebe90
+			fabric-transfer-api-v1: Fabric Transfer API (v1) 2.1.6+413cbbc790
+			fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 1.3.3+08b73de490
+		fabric-language-kotlin: Fabric Language Kotlin 1.9.1+kotlin.1.8.10
+			org_jetbrains_kotlin_kotlin-reflect: kotlin-reflect 1.8.10
+			org_jetbrains_kotlin_kotlin-stdlib: kotlin-stdlib 1.8.10
+			org_jetbrains_kotlin_kotlin-stdlib-jdk7: kotlin-stdlib-jdk7 1.8.10
+			org_jetbrains_kotlin_kotlin-stdlib-jdk8: kotlin-stdlib-jdk8 1.8.10
+			org_jetbrains_kotlinx_atomicfu-jvm: atomicfu-jvm 0.19.0
+			org_jetbrains_kotlinx_kotlinx-coroutines-core-jvm: kotlinx-coroutines-core-jvm 1.6.4
+			org_jetbrains_kotlinx_kotlinx-coroutines-jdk8: kotlinx-coroutines-jdk8 1.6.4
+			org_jetbrains_kotlinx_kotlinx-datetime-jvm: kotlinx-datetime-jvm 0.4.0
+			org_jetbrains_kotlinx_kotlinx-serialization-cbor-jvm: kotlinx-serialization-cbor-jvm 1.4.1
+			org_jetbrains_kotlinx_kotlinx-serialization-core-jvm: kotlinx-serialization-core-jvm 1.4.1
+			org_jetbrains_kotlinx_kotlinx-serialization-json-jvm: kotlinx-serialization-json-jvm 1.4.1
+		fabricloader: Fabric Loader 0.14.17
+		fabrishot: Fabrishot 1.9.1
+		fallingleaves: Falling Leaves 1.13.0+1.19.2
+		fancymenu: FancyMenu 2.13.3
+		farmersdelight: Farmer's Delight 1.19.2-1.3.9
+		farmersknives: Farmer's Knives 2.4
+		farmersrespite: Farmer's Respite 2.2.4
+		farsight: Farsight Mod 1.19-2.4
+			com_github_jctools_jctools_jctools-core: jctools-core v4.0.1
+		ferritecore: FerriteCore 5.0.3
+		forgeconfigapiport: Forge Config API Port 4.2.11
+		frame: Frame 0.26.1+1.19-fabric
+			frame-api-base: Frame Base 0.2.1+906ebc04a9
+			frame-blocks-v0: Frame Blocks (v0) 0.1.3+233e7428a9
+			frame-config-v0: Frame Config (v0) 0.3.1+0fa45150a9
+			frame-content-registries-v0: Frame Content Registries (v0) 0.4.0+2876b511a9
+			frame-enchantments-v0: Frame Enchantments (v0) 0.1.0+4093105da9
+			frame-game-rules-v0: Frame Game Rules (v0) 0.2.4+e7ce56a6a9
+			frame-items-v0: Frame Items (v0) 0.1.3+906ebc04a9
+			frame-loot-tables-v0: Frame Loot Tables (v0) 0.1.4+4f7341eca9
+			frame-registries-v0: Frame Registries (v0) 0.1.1+0e0ec74ea9
+			frame-rendering-v0: Frame Rendering (v0) 0.1.5+906ebc04a9
+			frame-tabbed-item-groups-v0: Frame Tabbed Item Groups (v0) 0.2.4+0aca9b56a9
+			frame-toymaker-v0: Frame Data Generation Helpers (v0) 0.6.1+b13741c3a9
+			frame-woods-v0: Frame Woods (v0) 0.2.1+6a33fbada9
+		friendsandfoes: Friends&Foes 1.8.0
+		ftbchunks: FTB Chunks 1902.3.15-build.233
+		ftblibrary: FTB Library 1902.3.13-build.175
+		ftbquests: FTB Quests 1902.4.6-build.176
+			team_reborn_energy: Energy 2.2.0
+		ftbteams: FTB Teams 1902.2.12-build.95
+		fwaystones: Fabric Waystones 3.0.7+mc1.19.2
+		galosphere: Galosphere 1.19.2-1.2.2
+		geckolib3: Geckolib 3.1.40
+			com_eliotlash_mclib_mclib: mclib 20
+		geodes: More Geodes 1.6.4+1.19
+		geophilic-fabric: Geophilic 1.19-1.2.2
+		go-fish: Go Fish 1.6.0-1.19.1
+		goblintraders: Goblin Traders 1.8.1
+		goodall: Goodall 1.2.0
+		graveyard: The Graveyard 2.3
+		graveyard_biomes: The Graveyard Biomes 1.6
+		guardvillagers: Guard Villagers Fabric 1.19.2-1.0.16
+		here-be-no-dragons: Here be no Dragons! 1.0.0
+		highlighter: Highlighter 1.1.4
+		horseexpert: Horse Expert 4.0.0
+		icarus: Icarus 1.14
+		iceberg: Iceberg 1.0.46
+		illagerslovearmor: IllagersLoveArmor 1.0.2+1.19
+		illuminations: Illuminations 1.10.11
+		immediatelyfast: ImmediatelyFast 1.1.9
+		immersive_armors: Immersive Armors 1.5.4+1.19.2
+		immersive_weathering: Immersive Weathering 1.19.2-1.2.8
+		imst: Immersive structures 2.0.7
+		indium: Indium 1.0.9+mc1.19.2
+		interactic: Interactic 0.1.11+1.19
+		inventoryhud: Inventory HUD + 3.4.7
+		inventoryprofilesnext: Inventory Profiles Next 1.9.2
+		iris: Iris 1.5.2
+			io_github_douira_glsl-transformer: glsl-transformer 2.0.0-pre9
+			org_anarres_jcpp: jcpp 1.4.14
+			org_antlr_antlr4-runtime: antlr4-runtime 4.11.1
+		itemfilters: Item Filters 1902.2.9-build.46
+		itemmodelfix: Item Model Fix 1.0.3+1.19
+		jade: Jade 8.7.3
+		jamlib: JamLib 0.6.0+1.19
+		java: OpenJDK 64-Bit Server VM 17
+		jmi: JourneyMapIntegration 0.13-30
+		journeymap: Journeymap 5.9.3
+			journeymap-api-fabric: JourneyMap API 1.19.1-1.9-fabric-SNAPSHOT
+		kambrik: Kambrik 4.0-1.19.2
+		kiwi: Kiwi Lib 8.3.3
+		kleeslabs: KleeSlabs 12.1.0
+		konkrete: Konkrete 1.6.0
+		krypton: Krypton 0.2.1
+			com_velocitypowered_velocity-native: velocity-native 3.1.2-SNAPSHOT
+		lambdabettergrass: LambdaBetterGrass 1.3.0+1.19
+		lambdynlights: LambDynamicLights 2.2.0+1.19.2
+			pride: Pride Lib 1.1.2+1.19
+			spruceui: SpruceUI 4.1.0+1.19.2
+		languagereload: Language Reload 1.5.5+1.19.2
+		lazydfu: LazyDFU 0.1.3
+		leavesbegone: Leaves Be Gone 4.0.1
+		legendarytooltips: Legendary Tooltips 1.3.3
+		letmedespawn: Let Me Despawn fabric-1.0.2
+		libipn: libIPN 2.0.2
+		lithium: Lithium 0.11.0
+		logbegone: Log Begone 1.0.4
+		lootintegrations: Loot integration Mod 1.19.3-3.1
+		magnumtorch: Magnum Torch 4.2.1
+		mapfrontiers: MapFrontiers 2.4.0-fabric
+		mcda: MC Dungeons Armors 2.4.4
+		mcdar: MC Dungeons Artifacts 1.5.3-1.19
+		mcdw: MC Dungeons Weapons 5.0.6-1.19
+			com_github_llamalad7_mixinextras: MixinExtras 0.2.0-beta.2
+			enchant_giver: Enchant Giver 1.3.0
+		mcsa: MC Story Mode Armors 3.1.3+1.19
+		meadow: Meadow 1.1.1
+		medievalmusic: Medieval Music Mod 1.19-2.0
+		medievalorigins: Medieval Origins 1.19.x-4.1.3
+		medievalweapons: Medieval Weapons 1.4.4
+		memoryleakfix: memory Leak Fix 1.19.3-0.8.0
+		merchantmarkers: Merchant Markers 1.2.3
+		midnightlib: MidnightLib 1.0.0
+		minecells: Mine Cells 1.3.5
+		minecraft: Minecraft 1.19.2
+		minelib: mine11lib 0.1.3+1.19
+			com_sksamuel_scrimage_scrimage-core: scrimage-core 4.0.31
+		mixintrace: MixinTrace 1.1.1+1.17
+		modmenu: Mod Menu 4.1.2
+		moonlight: Moonlight 1.19.2-2.2.16
+		moreculling: More Culling 1.19.1-0.16.0
+			conditional-mixin: conditional mixin 0.3.0
+		mousetweaks: Mouse Tweaks 2.22
+		mysticaloaktree: Mystical Oak Tree 1.19.2-1.7
+		mythicmetals: Mythic Metals 0.17.2+1.19.2
+			additionalentityattributes: Additionalentityattributes 1.2.0+1.19
+		mythicmetals_decorations: Mythic Metals Decorations 0.5.2+1.19.2
+		mythicmounts: Mythic Mounts 1.19.2-7.1
+		mythicupgrades: Mythic Upgrades 1.5.1
+		nameplate: Nameplate 1.0.10
+		naturalist: Naturalist 2.1.1
+		naturescompass: Nature's Compass 1.19.2-2.1.0-fabric
+		netherdepthsupgrade: Nether Depths Upgrade fabric-2.0.4-1.19.2
+		netherportalfix: NetherPortalFix 10.0.1
+		nethersdelight: Nether's Delight 1.0.1
+			disable_custom_worlds_advice: Disable Custom Worlds Advice 3.0
+		nicer-skies: Nicer Skies 1.2.0
+		nightconfigfixes: Night Config Fixes 4.0.6
+		nnvf: No Night Vision Flickering 0.1.1
+		nochatreports: No Chat Reports 1.19.2-v1.13.12
+		nofade: No Fade 1.18-2.0.1
+		notenoughanimations: NotEnoughAnimations 1.6.2
+		optigui: OptiGUI 1.1.6
+			org_apache_commons_commons-text: commons-text 1.9
+		origins: Origins 1.7.1
+			apoli: Apoli 2.6.1
+				calio: Calio 1.7.0
+		owo: oωo 0.9.3+1.19
+			blue_endless_jankson: jankson 1.2.1
+		packetpray: Packetpray 1.0-SNAPSHOT
+		paintings: Paintings++ 10.2.4.0
+		paradise_lost: Paradise Lost 2.0.2-beta+1.19.2
+			gud_recipe_confidence: Recipe Confidence 1.0.2
+			incubus_core: Incubus Core 1.8.0
+		passablefoliage: Passable Foliage 1.19-fabric-5.0.2
+		patchouli: Patchouli 1.19.2-77-FABRIC
+			fiber: fiber 0.23.0-2
+		paxi: Paxi 1.19.2-Fabric-3.0.1
+		pehkui: Pehkui 3.7.0+1.14.4-1.19.3
+			kanos_config: Kanos Config 0.3.1+1.14.4-1.19
+		philipsruins: Philip`s ruins 1.19.2
+		pickupnotifier: Pick Up Notifier 4.2.4
+		ping-wheel: Ping Wheel 1.2.0
+		player-animator: Player Animator 1.0.2
+		playerex: PlayerEx 3.5.2
+			net_objecthunter_exp4j: exp4j 0.4.8
+			opc: Offline Player Cache 0.6.4
+			placeholder-api: Placeholder API 2.0.0-pre.1+1.19.2
+		plushies: Plushie Mod 1.2
+		polymorph: Polymorph 0.46.1+1.19.2
+		presencefootsteps: Presence Footsteps 1.6.4
+			kirin: Kirin UI 1.11.1
+		prism: Prism 1.0.3
+		probablychests: Probably Chests 0.5.5-1.19.2
+		professions: Professions 1.0.4
+			com_typesafe_config: config 1.4.1
+			fabric-permissions-api-v0: fabric-permissions-api 0.2-SNAPSHOT
+			io_leangen_geantyref_geantyref: geantyref 1.3.11
+			octo-economy-api: Octo Economy API 1.1.0
+			org_spongepowered_configurate-core: configurate-core 4.1.2
+			org_spongepowered_configurate-hocon: configurate-hocon 4.1.2
+		professionsi: Professions Integrations 1.0.4
+		projectile_damage: Projectile Damage Attribute 3.0.0+1.19
+		publicguiannouncement: Public Gui Announcement 4.3.2
+		puzzle: Puzzle 1.4.2-1.19
+			puzzle-base: Puzzle Base 1.4.2-1.19
+			puzzle-gui: Puzzle GUI 1.4.2-1.19
+			puzzle-models: Puzzle Models 1.4.2-1.19
+			puzzle-splashscreen: Puzzle Splash Screen 1.4.2-1.19
+		puzzleslib: Puzzles Lib 4.3.12
+		quartzelv: Quartz Elevator 2.1.5+1.19
+		reacharound: Reacharound 1.1.2
+		rebind_narrator: Rebind Narrator 2.0.0
+		redmorestructure: Reds More Structures 1.0.6-fabric-1.19.2
+		reeses-sodium-options: Reese's Sodium Options 1.4.9+mc1.19.2-build.67
+		relicex: RelicEx 3.3.1+1.19.2
+			armorrenderlib: Armor Render Lib 0.2.6
+		repurposed_structures: Repurposed Structures 6.3.16+1.19.2
+		resourcepackoverrides: Resource Pack Overrides 4.0.2
+		rhino: Rhino 1902.2.2-build.264
+		rightclickharvest: Right Click Harvest 3.1.0+1.19-1.19.2
+		rocks: This Rocks! 1.6.1
+		rottencreatures: Rotten Creatures 1.0.1
+		roughly_enough_loot_tables: Roughly Enough Loot Tables 1.19-1.0
+		roughly_enough_trades: Roughly Enough Trades 1.19-1.0
+		roughlyenoughitems: Roughly Enough Items 9.1.591
+			error_notifier: Error Notifier 1.0.9
+		roughlyenoughprofessions: Roughly Enough Professions 1.1.4
+		roughlyenoughresources: Roughly Enough Resources 2.6.0
+		rpg_origins: RPG Origins 1.3.0
+		rpgdifficulty: Rpg Difficulty 1.3.5
+		runes: Runes 0.9.6+1.19
+		sdrp: Simple Discord Rich Presence 3.0.4-build.27+mc1.19.2
+		seasons: Fabric Seasons 1.4-BETA+1.19
+		shroom_dealers: Shroom Dealers! 1.6
+		skinlayers: 3d Skin Layers 1.5.2-mc1.19.1
+		skyvillages: Sky Villages 1.0.2.1
+		smarterfarmers: Smarter Farmers 1.19.2-1.7.1
+		smoothboot: Smooth Boot 1.19-1.7.1
+		smoothchunk: Smooth chunk save Mod 1.19.1-2.0
+		snowrealmagic: Snow! Real Magic! 5.0.5
+		snowundertrees: Snow Under Trees 1.0.0+1.19.2
+		snowyspirit: Snowy Spirit 1.19.2-2.1.7
+		sod: Sod 22.10.13
+		sodium: Sodium 0.4.4+build.18
+			org_joml_joml: joml 1.10.4
+		sodium-extra: Sodium Extra 0.4.16+mc1.19.2-build.90
+			caffeineconfig: CaffeineConfig 1.0.0+1.17
+		soulsweapons: Marium's Soulslike Weaponry 0.9.8
+		sound_physics_remastered: Sound Physics Remastered 1.19.2-1.0.18
+		spark: spark 1.10.29
+		spell_engine: Spell Engine 0.9.15+1.19
+		spell_power: Spell Power Attribute 0.9.8+1.19
+		spellbladenext: Spellblade Next 1.0.15.1
+		spyglass-improvements: Spyglass Improvements 1.4+mc1.19+fabric
+		starlight: Starlight 1.1.1+fabric.ae22326
+		starterkit: Starter Kit 5.2
+		stoneholm: Stoneholm 1.4.4
+		strawgolem: Straw Golem 2.0.0-beta.5
+		structory: Structory 1.0.1
+		structory_towers: Structory: Towers 1.0.0
+		structureessentials: Structure Essentials Mod 1.19.2-2.5
+		supplementaries: Supplementaries 1.19.2-2.2.57
+		t_and_t: Towns and Towers 1.10
+		takesapillage: Takes a Pillage 1.0.4
+		talkbubbles: Talk Bubbles 1.0.4
+		terrablender: TerraBlender 2.0.1.130
+		terrestria: Terrestria 5.0.8
+			terraform-biome-remapper-api-v1: Terraform Biome Remapper API (v1) 4.2.0
+			terraform-config-api-v1: Terraform Config API (v1) 4.2.0
+			terraform-dirt-api-v1: Terraform Dirt API (v1) 4.2.0
+			terraform-shapes-api-v1: Terraform Shapes API (v1) 4.2.0
+			terraform-surfaces-api-v1: Terraform Surfaces API (v1) 4.2.0
+			terraform-tree-api-v1: Terraform Tree API (v1) 4.2.0
+			terrestria-client: Terrestria: Client 5.0.8
+			terrestria-common: Terrestria: Common 5.0.8
+			terrestria-worldgen: Terrestria: World Generation 5.0.8
+		the_bumblezone: The Bumblezone - Fabric 6.6.17+1.19.2
+			fake-player-api: Fake Player API 0.5.0
+		things: Things 0.3.0+1.19
+		tiered: Tiered 1.2.2
+		tinyskeletons: Tiny Skeletons 4.2.2
+		tlc: The Lost Castle 1.0.0
+		toms_storage: Tom's Simple Storage Mod 1.5.1
+		toolstats: ToolStats 12.0.2
+		tradingpost: Trading Post 4.2.0
+		transparent: Transparent 5.1.2
+		travelersbackpack: Traveler's Backpack 1.19.2-8.2.13
+		treechop: HT's TreeChop 0.17.6
+		trinkets: Trinkets 3.4.2
+		twigs: Twigs 2.0.0-beta.9+1.19-fabric
+		twilightforest: The Twilight Forest 4.2.335
+			com_google_code_findbugs_jsr305: jsr305 3.0.2
+			javax_annotation_javax_annotation-api: javax.annotation-api 1.3.2
+			porting_lib: Porting Lib 2.1.727+1.19.2
+				forge_tags: Porting Lib Tags 3.0
+				porting_lib_accessors: Porting Lib Accessors 2.1.727+1.19.2
+				porting_lib_attributes: Porting Lib Attributes 2.1.727+1.19.2
+				porting_lib_base: Porting Lib Base 2.1.727+1.19.2
+				porting_lib_common: Porting Lib Common 2.1.727+1.19.2
+				porting_lib_constants: Porting Lib Constants 2.1.727+1.19.2
+				porting_lib_entity: Porting Lib Entity 2.1.727+1.19.2
+				porting_lib_extensions: Porting Lib Extensions 2.1.727+1.19.2
+				porting_lib_fake_players: Porting Lib Fake Players 2.1.727+1.19.2
+				porting_lib_lazy_registration: Porting Lib Lazy Register 2.1.727+1.19.2
+				porting_lib_model_generators: Porting Lib Model Generators 2.1.727+1.19.2
+				porting_lib_model_loader: Porting Lib Model Loader 2.1.727+1.19.2
+				porting_lib_models: Porting Lib Models 2.1.727+1.19.2
+				porting_lib_networking: Porting Lib Networking 2.1.727+1.19.2
+				porting_lib_obj_loader: Porting Lib Obj Loader 2.1.727+1.19.2
+				porting_lib_transfer: Porting Lib Transfer 2.1.727+1.19.2
+				serialization_hooks: Serialization Hooks 0.3.26
+		unsafe-world-random-access-detector: Unsafe World Random Access Detector 1.1.0
+		veinmining: Vein Mining 1.1.1+1.19.2
+			spectrelib: SpectreLib 0.12.3+1.19.2
+		villagernames: Villager Names 4.2.1
+		villagersplus: Villagers Plus 1.9
+		vinery: Vinery 1.1.4
+		visuality: Visuality 0.5.6
+		visualworkbench: Visual Workbench 4.2.3
+		voidtotem: Void Totem 2.1.0
+		voidz: VoidZ 1.0.9
+		wabi_sabi_structures: Wabi-Sabi Structures 1.1.2
+		wetlands: Beneath the Wetlands 1.0.2
+		whisperwoods: Whisperwoods 1.19-2.1.1
+		windchimes: Windchimes 1.2.1
+		winterly: Winterly 0.8.3
+		wizardex: WizardEx 1.0.3
+		wizards: Wizards 0.9.12+1.19
+		wolfarmorcompat: Wolf Armor Compat 1.0.2-1.19.2
+		wolveswitharmor: Wolves With Armor 1.8.0-1.19
+			maybe-data: Maybe data 1.3.2-1.19-rc2
+			static-content: Static Content 1.0.1-1.16.2
+				staticdata: Static Data 1.1.2
+		wondrouswilds: Wondrous Wilds 1.19.2-1.1.6
+		woof: Woof 3.0.0-1.19
+		xlpackets: XLPackets 1.19.2-4
+		xps: Xp Obelisk 0.4.7-r+1.19.2-Fabric
+		xps_additions: XP Obelisk Additions 0.1.8-r+1.19.2-Fabric
+		yet-another-config-lib: YetAnotherConfigLib 2.2.0-for-1.19.2
+		yigd: You're in Grave Danger 1.4.8
+		yosbr: YOSBR 0.1.1
+		ysns: You Shall Not Spawn! 1.0.1
+		yungsapi: YUNG's API 1.19.2-Fabric-3.8.8
+			org_javassist_javassist: javassist 3.28.0-GA
+		yungsbridges: YUNG's Bridges 1.19.2-Fabric-3.1.0
+		yungsextras: YUNG's Extras 1.19.2-Fabric-3.1.0
+		zenith: Zenith 0.4.3+1.19.2
+	Loaded Shaderpack: (off)
+	NEC status: No NEC detected
+	Server Running: true
+	Player Count: 1 / 8; [class_3222['LARPU'/123, l='ServerLevel[The Golden Land]', x=297.58, y=64.00, z=-1255.25]]
+	Data Packs: vanilla, Fabric Mods, professions/fabric/normal, professionsi/fabric/normal/byg, professionsi/fabric/normal/c, professionsi/fabric/normal/farmersdelight, professionsi/fabric/normal/mythicmetals, Everycomp Generated Pack, Immersive Weathering Generated Pack, Snowyspirit Generated Pack, Supplementaries Generated Pack, Alloy_Forgery_Fuel_Support_v1.zip, BMC-Datapack-1.19.2-2.1.54-fabric.zip, Charm_Architects_Palette_integration.zip, Charm_BetterEnd_integration.zip, Charm_BetterNether_integration.zip, ctov-bounty-board-add-on-v1-0.zip, ctov-chefs-delight-add-on-v1-0.zip, ctov-farmers-delight-compat-v1-2.zip, ctov-friends-and-foes-add-on.zip, ctov-waystone-add-on-v1-0.zip, Farmers_Delight_Stripping_Expanded_v1.zip, hardening_catalyst_blacklist.zip, ichphilipp-s-endcity-better-end-1-18-1.zip (incompatible), mmc_tags.zip, orb.zip (incompatible), Origins_EnvironmentZ_Dehydration_v1.2.zip, Origins_Expanded_Foods_v1.3.zip (incompatible), PlayerEx_Cap200.zip, Repurposed_Structures-Better_Desert_Temples_v4.zip, Repurposed_Structures-Better_Desert_Temples_v6.zip, Repurposed_Structures-Better_Dungeons_v4.zip, Repurposed_Structures-Better_Monuments_v3.zip, Repurposed_Structures-Better_Monuments_v5.zip, Repurposed_Structures-Better_Strongholds_v4.zip, Repurposed_Structures-Better_Witch_Huts_v3.zip, Repurposed_Structures-Bountiful_v2.zip, Repurposed_Structures-Chef's_Delight_v1.zip, Repurposed_Structures-Farmers_Delight_v5.zip, Repurposed_Structures-Friends_And_Foes_v3.zip, Repurposed_Structures-Oh_The_Biomes_Youll_Go_v2.zip, Repurposed_Structures-VillagersPlus_v1.zip, Repurposed_Structures-Wizards_v2.zip
+	World Generation: Stable
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fabric'; Server brand changed to 'fabric'
+	Launched Version: fabric-loader-0.14.17-1.19.2
